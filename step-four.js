@@ -1,4 +1,3 @@
-var https = require('https');
 
 //var options = process.argv.slice(2);
 
@@ -9,6 +8,7 @@ var requestOptions = {
 
 function getHTML(options, callback) {
 
+var https = require('https');
 var data = '';
 
   https.get(options, function(response){
@@ -25,7 +25,7 @@ var data = '';
       console.log('Response stream complete.');
     });
   });
-};
+}
 
 function printHTML(html){
   console.log(html);
