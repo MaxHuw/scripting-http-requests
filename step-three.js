@@ -1,13 +1,14 @@
+var https = require('https');
+
 var options = process.argv.slice(2);
 
+var requestOptions = {
+  host: options[0],
+  path: options[1]
+};
+
+
 function getAndPrintHTML () {
-
-  var https = require('https');
-
-  var requestOptions = {
-    host: options[0],
-    path: options[1]
-  };
 
   var data = '';
 
